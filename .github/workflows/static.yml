@@ -57,7 +57,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           path-to-root: pages
-          base-url-path: https://bullock.sh/  
+          base-url-path: https://jessey.bullock.sh/ 
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -70,7 +70,11 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2     
+        uses: actions/deploy-pages@v2    
+
+      - name: Submit sitemap
+        run: |
+          curl https://www.google.com/ping?sitemap=https://jessey.bullock.sh/sitemap.xml  
 
       - name: Output stats
         run: |

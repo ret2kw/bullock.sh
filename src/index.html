@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -19,35 +20,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        function getIP(callback) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://httpbin.org/ip', true);
-            xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                var ipAddress = response.origin;
-                callback(ipAddress);
-                }   
-            };
-            xhr.send();
-        };
 
-        getIP(function(ipAddress) {
-            document.getElementById('ip-address').textContent= ipAddress;
-            var typed = new Typed('#terminal', {
-                stringsElement: '#typed-strings',
-                typeSpeed:30,
-                smartBackspace: true,
-                backSpeed: 30,
-                showCursor: true,
-                autoInsertCss: false,
-            });
+        window.addEventListener("load", (event) => {
+
+            if(typeof window.webkitConvertPointFromNodeToPage === 'function'){
+
+                console.log('[*] detected webkit');
+                document.querySelector('.scanlines').classList.add('disable_animations');
+                document.querySelector('.tv').classList.add('disable_animations');
+                document.querySelector('.flicker').classList.add('disable_animations');
+                document.querySelector('.terminal').classList.add('disable_animations');
+                document.querySelector('.noise').classList.add('disable_animations');
+                document.querySelector('.noise').classList.remove('noise');
+                
+
+            }
+        
         });
     </script>
 </head>
 
 <body>
-    <div id="typed-strings">
+    <div id="typed-strings" style="visibility:hidden">
         <p>jessey@bullock.sh:~$ ^1000ptyhon log4j.py </p>
         <p>jessey@bullock.sh:~$ python log4j.py ^100
             <span id="ip-address">8.8.8.8 </span> -p 443 <br>
@@ -83,6 +77,34 @@
 </body>
 
 <script>
+
+    function getIP(callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://httpbin.org/ip', true);
+        xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var ipAddress = response.origin;
+            callback(ipAddress);
+            }   
+        };
+        xhr.send();
+    };
+
+    getIP(function(ipAddress) {
+        document.getElementById('ip-address').textContent= ipAddress;
+
+        var typed = new Typed('#terminal', {
+            stringsElement: '#typed-strings',
+            typeSpeed:30,
+            smartBackspace: true,
+            backSpeed: 30,
+            showCursor: true,
+            autoInsertCss: false,
+        });
+
+    });
+
     var scanlines = document.querySelector('.scanlines');
     var tv = document.querySelector('.tv');
 
