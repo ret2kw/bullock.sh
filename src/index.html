@@ -6,7 +6,7 @@
     <title>Jessey Bullock</title>
     <meta name="description" content="Jessey Bullock - Security Lead">
     <meta name="keywords"
-        content="Jessey Bullock, offensive security, application security, red team, metasploit, wireshark, penetration testing, security consultant">
+        content="Jessey Bullock, offensive security, application security, red team, metasploit, wireshark, penetration testing, security consultant, AI security, cryptography, supply chain security">
     
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -37,12 +37,6 @@
             }
         
         });
-
-        window.scrollTo({
-            top: 0,
-            left: 0,
-        });
-
     </script>
 </head>
 
@@ -66,11 +60,11 @@
                 </span>
             </span><br>`
             &nbsp;`$` cat publications.txt<br><br>
-            &nbsp;`<a class="terminal" href="https://votingsystems.cdn.sos.ca.gov/vendors/hart-intercivic/verity/verity-sectel.pdf">California Secretary of State Election Red Team</a><br>
-            &nbsp;<a class="terminal" href="https://www.wiley.com/en-us/Wireshark+for+Security+Professionals%3A+Using+Wireshark+and+the+Metasploit+Framework-p-9781118918210">Wireshark for Security Professionals</a><br>
-            &nbsp;<a class="terminal" href="https://www.mobygames.com/person/798441/jessey-bullock/"">Video Game Credits</a><br>`
+            `<a class="terminal" href="https://votingsystems.cdn.sos.ca.gov/vendors/hart-intercivic/verity/verity-sectel.pdf">&nbsp;California Secretary of State Election Red Team</a><br>
+            <a class="terminal" href="https://www.wiley.com/en-us/Wireshark+for+Security+Professionals%3A+Using+Wireshark+and+the+Metasploit+Framework-p-9781118918210">&nbsp;Wireshark for Security Professionals</a><br>
+            <a class="terminal" href="https://www.mobygames.com/person/798441/jessey-bullock/"">&nbsp;Video Game Credits</a><br>`
             &nbsp;`$` exit<br>
-            &nbsp;`<a class="terminal">session disconnected</a><br><br><br><br><br><br>`
+            `<a class="terminal">&nbsp;session disconnected</a><br><br><br><br><br><br>`
         </p>
     </div>
 
@@ -84,7 +78,6 @@
 </body>
 
 <script>
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
     function getIP(callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'https://httpbin.org/ip', true);
@@ -126,6 +119,8 @@
 
     set_size();
     window.addEventListener('resize', set_size);
+    window.scrollTo(0,0);
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
 </script>
 
 </html>

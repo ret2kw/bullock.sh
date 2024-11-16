@@ -1,13 +1,15 @@
 body {
   margin: 0;
   background: black;
+  scroll-behavior: auto;
 }
 .terminal img[src*="blob:"], .terminal video {
   max-width: 100%;
 }
 #terminal {
   height: 100vh;
-  /* overflow-y:auto; */
+  overflow-y: auto;
+  overflow-x: auto;
   padding-bottom: 0;
 }
 /* glow */
