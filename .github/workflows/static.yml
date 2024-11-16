@@ -64,7 +64,7 @@ jobs:
 
       - name: Upload artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           # Upload entire repository
           path: 'pages'
@@ -72,6 +72,8 @@ jobs:
       - name: Output stats
         run: |
           echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}" 
+          echo "pages-url = ${{ steps.deployment.outputs.page_url }}"
+          ls -sail pages/ 
 
 
   deploy:
@@ -89,9 +91,5 @@ jobs:
       - name: Submit sitemap
         run: |
           curl https://www.google.com/ping?sitemap=https://jessey.bullock.sh/sitemap.xml  
-
-      - name: Output stats
-        run: |
-          echo "pages-url = ${{ steps.deployment.outputs.page_url }}"
-          ls -sail pages/ 
+          
           
