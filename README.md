@@ -1,2 +1,2 @@
 # jessey.bullock.sh
-Github Pages repo for personal site
+Github Pages repo for [https://jessey.bullock.sh](https://jessey.bullock.sh)
