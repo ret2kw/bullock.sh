@@ -20,7 +20,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-
         window.addEventListener("load", (event) => {
 
             if(typeof window.webkitConvertPointFromNodeToPage === 'function'){
@@ -35,6 +34,13 @@
                 
 
             }
+
+            window.scrollTo(0,0);
+            document.body.scrollTo(0,0);
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            document.getElementById("terminal").scrollTo(0,0);
+            document.getElementById("typed-strings").scrollTo(0,0);
+            tv.scrollTo(0,0);
         
         });
     </script>
@@ -42,8 +48,8 @@
 
 <body>
     <div id="typed-strings" style="visibility:hidden">
-        <p>&nbsp;jessey@bullock.sh:~$ ^1000ptyhon log4j.py </p>
-        <p>&nbsp;jessey@bullock.sh:~$ python log4j.py ^100
+        <p>&nbsp;jessey@bullock.sh:~$ ^1000ptyhon log4j-exploit.py </p>
+        <p>&nbsp;jessey@bullock.sh:~$ python log4j-exploit.py ^100
             <span id="ip-address">8.8.8.8 </span> -p 443 <br>
             &nbsp;`[*] Generating first stage gadget class and JNDI string`^500.^100.^100.<br>
             &nbsp;`[*] Setting up LDAP/HTTP Server and shell handler`^100.^100.^100.<br>
@@ -60,9 +66,9 @@
                 </span>
             </span><br>`
             &nbsp;`$` cat publications.txt<br><br>
-            `&nbsp;<a class="terminal" href="https://votingsystems.cdn.sos.ca.gov/vendors/hart-intercivic/verity/verity-sectel.pdf">California Secretary of State Election Red Team</a><br>
-            &nbsp;<a class="terminal" href="https://www.wiley.com/en-us/Wireshark+for+Security+Professionals%3A+Using+Wireshark+and+the+Metasploit+Framework-p-9781118918210">Wireshark for Security Professionals</a><br>
-            &nbsp;<a class="terminal" href="https://www.mobygames.com/person/798441/jessey-bullock/">Video Game Credits</a><br>`
+            `<a style="text-decoration:none;" class="terminal" href="https://votingsystems.cdn.sos.ca.gov/vendors/hart-intercivic/verity/verity-sectel.pdf">&nbsp;<span style="text-decoration:underline;">California Secretary of State Election Red Team</span></a><br>
+            <a style="text-decoration:none;" class="terminal" href="https://www.wiley.com/en-us/Wireshark+for+Security+Professionals%3A+Using+Wireshark+and+the+Metasploit+Framework-p-9781118918210">&nbsp;<span style="text-decoration:underline;">Wireshark for Security Professionals</span></a><br>
+            <a style="text-decoration:none;" class="terminal" href="https://www.mobygames.com/person/798441/jessey-bullock/">&nbsp;<span style="text-decoration:underline;">Video Game Credits</span></a><br>`
             &nbsp;`$` exit<br>
             `<a class="terminal">&nbsp;session disconnected</a><br><br><br><br><br><br>`
         </p>

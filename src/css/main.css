@@ -1,15 +1,18 @@
+html{
+  overflow: auto;
+}
+
 body {
   margin: 0;
   background: black;
-  scroll-behavior: auto;
 }
+
 .terminal img[src*="blob:"], .terminal video {
   max-width: 100%;
 }
 #terminal {
   height: 100vh;
-  overflow-y: auto;
-  overflow-x: auto;
+  overflow: auto;
   padding-bottom: 0;
 }
 /* glow */
@@ -276,6 +279,7 @@ to { -webkit-transform: translate(0, 100vh); transform: translate(0, 100vh)}
 .tv {
   height: 100vh;
   position: relative;
+  overflow: auto;
 }
 .tv.collapse {
   -webkit-animation: size 2s ease-out;
