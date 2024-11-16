@@ -120,7 +120,10 @@
     set_size();
     window.addEventListener('resize', set_size);
     window.scrollTo(0,0);
+    document.body.scrollTo(0,0);
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    document.getElementById("terminal").scrollTo(0,0);
+    document.getElementById("typed-strings").scrollTo(0,0);
 </script>
 
 </html>
