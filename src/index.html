@@ -6,7 +6,7 @@
     <title>Jessey Bullock</title>
     <meta name="description" content="Jessey Bullock - Security Lead">
     <meta name="keywords"
-        content="Jessey Bullock, offensive security, application security, red team, metasploit, wireshark, penetration testing, security consultant, AI security, cryptography, supply chain security">
+        content="Jessey Bullock, offensive security, application security, red team, metasploit, wireshark, penetration testing, security consultant, AI security, cryptography, supply chain security, information security, threat model, risk management">
     
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -31,25 +31,15 @@
                 document.querySelector('.terminal').classList.add('disable_animations');
                 document.querySelector('.noise').classList.add('disable_animations');
                 document.querySelector('.noise').classList.remove('noise');
-                
-
             }
-
-            window.scrollTo(0,0);
-            document.body.scrollTo(0,0);
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
-            document.getElementById("terminal").scrollTo(0,0);
-            document.getElementById("typed-strings").scrollTo(0,0);
-            tv.scrollTo(0,0);
-        
         });
     </script>
 </head>
 
 <body>
     <div id="typed-strings" style="visibility:hidden">
-        <p>&nbsp;jessey@bullock.sh:~$ ^1000ptyhon log4j-exploit.py </p>
-        <p>&nbsp;jessey@bullock.sh:~$ python log4j-exploit.py ^100
+        <p>&nbsp;jessey@bullock.sh:~$ ^1000ptyhon log4j-pwn.py </p>
+        <p>&nbsp;jessey@bullock.sh:~$ python log4j-pwn.py ^100
             <span id="ip-address">8.8.8.8 </span> -p 443 <br>
             &nbsp;`[*] Generating first stage gadget class and JNDI string`^500.^100.^100.<br>
             &nbsp;`[*] Setting up LDAP/HTTP Server and shell handler`^100.^100.^100.<br>
